@@ -1,5 +1,3 @@
-localStorage.removeItem("completedTasks");
-
 // click bg task change and other remove
 let _inp = document.querySelectorAll("#taskPannell>a");
 
@@ -51,9 +49,9 @@ function makeTask() {
           class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
           type="checkbox"
         />
-        <h5>${taskValue}</h5>
+        <h5 class="text-xl font-bold capitalize">${taskValue}</h5>
       </div>
-      <figure onclick="trash(this)">
+      <figure onclick="trash(this)" class="hover:scale-125 duration-500">
         <img
           class="w-[20px] h-[20px] cursor-pointer"
           src="src/images/trash.png"
@@ -75,11 +73,13 @@ function myTick(s) {
 
   if (s.checked) {
     // اضافه کردن به completeDiv
-    completeDiv.appendChild(taskChange);
+
     taskChange.classList.add("opacity-50");
     completeDiv.classList.remove("hidden");
-
     completeDiv.classList.add("flex");
+    let copy = taskChange.cloneNode(true); // true یعنی همراه فرزندها
+    completePage.appendChild(copy);
+    completeDiv.appendChild(taskChange);
   } else {
     // برگشت به taskdiv
     taskdiv.appendChild(taskChange);
@@ -101,13 +101,25 @@ function trash(s) {
 
 // trash page
 let trashPage = document.querySelector("#trashPage");
-
 let btnTrashPage = document.querySelector("#btnTrashPage");
 let btnAllTaskPage = document.querySelector("#btnAllTaskPage");
+
+let completePage = document.querySelector("#completePage");
+let completeBtnPage = document.querySelector("#completeBtnPage");
+
 btnTrashPage.addEventListener("click", () => {
   trashPage.classList.remove("hidden");
+  completePage.classList.add("hidden");
 });
+
+// all task page
 
 btnAllTaskPage.addEventListener("click", () => {
   trashPage.classList.add("hidden");
+  completePage.classList.add("hidden");
+});
+
+// compelte page task add in
+completeBtnPage.addEventListener("click", () => {
+  completePage.classList.remove("hidden");
 });
