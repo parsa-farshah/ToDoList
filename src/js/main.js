@@ -92,6 +92,22 @@ function myTick(s) {
 
 function trash(s) {
   let taskDelete = s.closest(".task");
-
   taskDelete.remove();
+  taskDelete.classList.add("opacity-40");
+  taskDelete.classList.add("select-none");
+  trashPage.appendChild(taskDelete);
+  console.log(trashAdd.appendChild(taskDelete));
 }
+
+// trash page
+let trashPage = document.querySelector("#trashPage");
+
+let btnTrashPage = document.querySelector("#btnTrashPage");
+let btnAllTaskPage = document.querySelector("#btnAllTaskPage");
+btnTrashPage.addEventListener("click", () => {
+  trashPage.classList.remove("hidden");
+});
+
+btnAllTaskPage.addEventListener("click", () => {
+  trashPage.classList.add("hidden");
+});
