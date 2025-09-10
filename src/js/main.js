@@ -20,6 +20,35 @@ _inp.forEach((value, i) => {
 });
 
 // inp task
-let inpTask = document.querySelectorAll("#inpTask>input");
+let inpTask = document.querySelector("#inpTask");
+let inpButton = document.querySelector("#inpTask>button");
+let taskAdd = document.getElementById("taskAdd");
+let taskValue = "";
 
-let taskValue = inpTask.value;
+inpButton.addEventListener("click", () => {
+  taskValue = inpTask.children[0].value;
+  makeTask();
+
+  // reset
+  inpTask.children[0].value = "";
+});
+
+function makeTask() {
+  taskAdd.innerHTML += `
+    <div class="mt-4 flex justify-between border-b border-b-gray-300">
+      <div class="w-full h-full flex items-center gap-2 pb-2">
+        <input
+          class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
+          type="checkbox"
+        />
+        <h5>${taskValue}</h5>
+      </div>
+      <figure>
+        <img
+          class="w-[20px] h-[20px] cursor-pointer"
+          src="src/images/trash.png"
+          alt=""
+        />
+      </figure>
+    </div> `;
+}
