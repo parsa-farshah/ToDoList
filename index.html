@@ -102,32 +102,28 @@
         <!-- end all header -->
 
         <!-- add task -->
-        <div id="inpTask" class="flex items-center justify-between mt-7">
+        <div
+          id="inpTask"
+          class="flex items-center justify-between mt-7 relative"
+        >
           <input
             class="w-full px-3 py-2 rounded-xl font-black bg-[#c4c4c4ad] focus:outline-1 focus:outline-blue-500"
             placeholder="+ Add Task"
             type="text"
           />
+          <button
+            class="absolute right-5 px-2 py-1 text-white font-bold text-sm rounded-sm bg-gray-500 cursor-pointer"
+          >
+            Add Task
+          </button>
         </div>
 
         <!-- tasks -->
-        <div class="mt-4 flex justify-between border-b border-b-gray-300">
-          <div class="w-full h-full flex items-center gap-2 pb-2">
-            <input
-              class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
-              type="checkbox"
-              name=""
-              id=""
-            />
-            <h5>hello</h5>
-          </div>
-          <figure>
-            <img
-              class="w-[20px] h-[20px] cursor-pointer"
-              src="src/images/trash.png"
-              alt=""
-            />
-          </figure>
+        <div id="taskAdd"></div>
+
+        <!-- Complete -->
+        <div id="complete" class="w-full h-fit mt-5 flex flex-wrap">
+          <h2 class="w-full text-sm text-gray-600">Complete</h2>
         </div>
       </section>
     </main>
