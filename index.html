@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="src/style/output.css" />
   </head>
   <body>
-    <main class="w-full h-[100vh] flex flex-wrap bg-[#aad7b8] py-5 px-5">
+    <main
+      class="w-full min-h-[100vh] md:h-fit flex flex-wrap content-start bg-[#aad7b8] py-5 px-5"
+    >
       <!------------------------------- panell ------------------->
       <section
-        class="w-[7%] border border-black/50 bg-[#f7c236] flex flex-wrap content-start justify-center gap-10"
+        class="w-[100%] md:w-[7%] h-fit md:min-h-[550px] border border-black/50 bg-[#f7c236] flex flex-wrap md:content-start items-center justify-center gap-10 py-3 md:py-0"
       >
         <!-------------------------- profile picture ---------------->
         <figure
-          class="w-[60%]  rounded-xl overflow-hidden mt-3 cursor-pointer"
+          class="w-[35px] md:w-[60%] rounded-xl overflow-hidden mt-0 md:mt-3 cursor-pointer"
         >
           <img src="src/images/parsa3.jpg" alt="profile" />
         </figure>
         <!------------------ task icon ------------------------->
         <figure
-          class="w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+          class="w-[35px] md:w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
         >
           <img src="src/images/task.png" alt="task" />
         </figure>
         <!------------------------------ search icon ----------------------->
         <figure
-          class="w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+          class="w-[35px] md:w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
         >
           <img src="src/images/search.png" alt="search" />
         </figure>
@@ -34,7 +36,7 @@
       <!-------------------------------- task pannell ------------------------->
       <section
         id="taskPannell"
-        class="w-[20%] h-full border border-black/50 bg-[#f7c236] flex flex-wrap justify-center gap-4 content-start pt-3"
+        class="w-full md:w-[20%] h-fit md:min-h-[550px] border border-black/50  bg-[#f7c236] flex flex-wrap justify-center gap-4 content-start md:pt-3 py-3 md:py-0 "
       >
         <!------------------------------ all tasks -------------------------->
         <a
@@ -77,7 +79,7 @@
       </section>
       <!-- task all make -->
       <section
-        class="w-[73%] h-full border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 p-5"
+        class="w-full md:w-[73%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9"
       >
         <!-- all header -->
         <div class="flex items-center justify-between">
