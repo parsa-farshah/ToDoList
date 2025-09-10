@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="src/style/output.css" />
   </head>
   <body>
-    <main class="w-full h-[100vh] flex flex-wrap bg-[#aad7b8] py-5">
-      <!-- panell -->
+    <main class="w-full h-[100vh] flex flex-wrap bg-[#aad7b8] py-5 px-5">
+      <!------------------------------- panell ------------------->
       <section
-        class="w-[5%] flex flex-wrap content-start justify-center gap-10"
+        class="w-[7%] border border-black/50 bg-[#f7c236] flex flex-wrap content-start justify-center gap-10"
       >
-        <!-- profile picture -->
+        <!-------------------------- profile picture ---------------->
         <figure
           class="w-[40px] h-[40px] rounded-xl overflow-hidden mt-3 cursor-pointer"
         >
           <img src="src/images/parsa3.jpg" alt="profile" />
         </figure>
-        <!-- task icon -->
+        <!------------------ task icon ------------------------->
         <figure
           class="w-[25px] h-[25px] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
         >
           <img src="src/images/task.png" alt="task" />
         </figure>
-        <!-- search icon -->
+        <!------------------------------ search icon ----------------------->
         <figure
           class="w-[25px] h-[25px] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
         >
           <img src="src/images/search.png" alt="search" />
         </figure>
       </section>
-      <!-- task pannell -->
+      <!-------------------------------- task pannell ------------------------->
       <section
         id="taskPannell"
-        class="w-[20%] h-full bg-[#7cd398] flex flex-wrap justify-center gap-4 content-start pt-3"
+        class="w-[20%] h-full border border-black/50 bg-[#f7c236] flex flex-wrap justify-center gap-4 content-start pt-3"
       >
-        <!-- all tasks -->
+        <!------------------------------ all tasks -------------------------->
         <a
           class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#f1f1f1] cursor-pointer"
           href="#"
@@ -50,7 +50,7 @@
           </figure>
           <h6 class="text-sm">All</h6>
         </a>
-        <!-- complete -->
+        <!---------------------------------- complete ------------------------->
         <a
           class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#c4c4c4ad] cursor-pointer"
           href="#"
@@ -59,12 +59,12 @@
             <img
               class="w-[20px] h-[20px]"
               src="src/images/complete.png"
-              alt=""
+              alt="#"
             />
           </figure>
           <h6 class="text-sm">Completed</h6>
         </a>
-        <!-- trash -->
+        <!---------------------------------- trash --------------------------->
         <a
           class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 cursor-pointer bg-[#c4c4c4ad]"
           href="#"
@@ -77,7 +77,7 @@
       </section>
       <!-- task all make -->
       <section
-        class="w-[70%] h-full bg-[#fff6e4] border inset-shadow-sm inset-shadow-black p-5"
+        class="w-[73%] h-full border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 p-5"
       >
         <!-- all header -->
         <div class="flex items-center justify-between">
@@ -122,7 +122,7 @@
         <div id="taskAdd"></div>
 
         <!-- Complete -->
-        <div id="complete" class="w-full h-fit mt-5 flex flex-wrap">
+        <div id="complete" class="w-full h-fit mt-5 flex-wrap hidden">
           <h2 class="w-full text-sm text-gray-600">Complete</h2>
         </div>
       </section>
