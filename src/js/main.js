@@ -20,24 +20,31 @@ _inp.forEach((value, i) => {
 });
 
 // inp task
-let inpTask = document.querySelector("#inpTask");
-let inpButton = document.querySelector("#inpTask>button");
-let taskAdd = document.getElementById("taskAdd");
+let inpTaskUser = document.querySelector("#inpTask");
+let createTaskBtn = document.querySelector("#inpTask>button");
+let taskdiv = document.getElementById("taskAdd");
 let taskValue = "";
 
-inpButton.addEventListener("click", () => {
-  taskValue = inpTask.children[0].value;
-  makeTask();
+createTaskBtn.addEventListener("click", () => {
+  if (inpTaskUser.children[0].value === "") {
+    alert("enter task");
+  } else {
+    taskValue = inpTaskUser.children[0].value;
+    makeTask();
+  }
 
   // reset
-  inpTask.children[0].value = "";
+  inpTaskUser.children[0].value = "";
+  inpTaskUser.children[0].focus();
 });
 
 function makeTask() {
-  taskAdd.innerHTML += `
-    <div class="mt-4 flex justify-between border-b border-b-gray-300">
+  taskdiv.innerHTML += `
+    <div  class=" task w-full mt-4 flex justify-between border-b border-b-gray-300">
       <div class="w-full h-full flex items-center gap-2 pb-2">
         <input
+        onclick="myTick(this)"
+         id="checkBox"
           class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
           type="checkbox"
         />
@@ -51,4 +58,16 @@ function makeTask() {
         />
       </figure>
     </div> `;
+}
+
+let completeDiv = document.querySelector("#complete");
+
+function myTick(s) {
+  let taskChange = s.closest(".task");
+  if (s.checked) {
+    completeDiv.appendChild(taskChange);
+    taskChange.classList.add("opacity-50");
+  } else {
+    taskChange.classList.add("opacity-100");
+  }
 }
