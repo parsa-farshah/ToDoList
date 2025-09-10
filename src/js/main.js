@@ -42,7 +42,7 @@ createTaskBtn.addEventListener("click", () => {
 function makeTask() {
   taskdiv.innerHTML += `
     <div  class=" task w-full mt-4 flex justify-between border-b border-b-gray-300">
-      <div class="w-full h-full flex items-center gap-2 pb-2">
+      <div id="allTask" class="w-full h-full flex items-center gap-2 pb-2">
         <input
         onclick="myTick(this)"
          id="checkBox"
@@ -122,4 +122,21 @@ btnAllTaskPage.addEventListener("click", () => {
 // compelte page task add in
 completeBtnPage.addEventListener("click", () => {
   completePage.classList.remove("hidden");
+});
+
+// add search
+let searchInp = document.querySelector("#search");
+searchInp.addEventListener("keyup", (e) => {
+  let allTasks = document.querySelectorAll("#allTask>h5");
+  let searchVal = e.target.value;
+  allTasks.forEach((val) => {
+    // بعد شرط بگذاریم
+    if (val.innerText.toLowerCase().indexOf(searchVal) >= 0) {
+      val.parentElement.parentElement.classList.remove("hidden");
+      val.parentElement.parentElement.classList.add("flex");
+    } else {
+      val.parentElement.parentElement.classList.add("hidden");
+      val.parentElement.parentElement.classList.remove("flex");
+    }
+  });
 });
