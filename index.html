@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list</title>
+    <link rel="stylesheet" href="src/style/output.css" />
+  </head>
+  <body>
+    <main class="w-full h-[100vh] flex flex-wrap bg-[#aad7b8] py-5">
+      <!-- panell -->
+      <section
+        class="w-[5%] flex flex-wrap content-start justify-center gap-10"
+      >
+        <!-- profile picture -->
+        <figure
+          class="w-[40px] h-[40px] rounded-xl overflow-hidden mt-3 cursor-pointer"
+        >
+          <img src="src/images/parsa3.jpg" alt="profile" />
+        </figure>
+        <!-- task icon -->
+        <figure
+          class="w-[25px] h-[25px] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+        >
+          <img src="src/images/task.png" alt="task" />
+        </figure>
+        <!-- search icon -->
+        <figure
+          class="w-[25px] h-[25px] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+        >
+          <img src="src/images/search.png" alt="search" />
+        </figure>
+      </section>
+      <!-- task pannell -->
+      <section
+        id="taskPannell"
+        class="w-[20%] h-full bg-[#7cd398] flex flex-wrap justify-center gap-4 content-start pt-3"
+      >
+        <!-- all tasks -->
+        <a
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#f1f1f1] cursor-pointer"
+          href="#"
+        >
+          <figure>
+            <img
+              class="w-[20px] h-[20px]"
+              src="src/images/check list.png"
+              alt=""
+            />
+          </figure>
+          <h6 class="text-sm">All</h6>
+        </a>
+        <!-- complete -->
+        <a
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#c4c4c4ad] cursor-pointer"
+          href="#"
+        >
+          <figure>
+            <img
+              class="w-[20px] h-[20px]"
+              src="src/images/complete.png"
+              alt=""
+            />
+          </figure>
+          <h6 class="text-sm">Completed</h6>
+        </a>
+        <!-- trash -->
+        <a
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 cursor-pointer bg-[#c4c4c4ad]"
+          href="#"
+        >
+          <figure>
+            <img class="w-[20px] h-[20px]" src="src/images/trash.png" alt="" />
+          </figure>
+          <h6 class="text-sm">Trash</h6>
+        </a>
+      </section>
+      <!-- task all make -->
+      <section
+        class="w-[70%] h-full bg-[#fff6e4] border inset-shadow-sm inset-shadow-black p-5"
+      >
+        <!-- all header -->
+        <div class="flex items-center justify-between">
+          <h6>All</h6>
+          <div class="flex items-center justify-between gap-3">
+            <div class="relative flex items-center">
+              <input class="border p-0.5" type="text" name="" id="" />
+              <img
+                class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                src="src/images/search.png"
+                alt=""
+              />
+            </div>
+            <!-- profile picture -->
+            <figure
+              class="w-[40px] h-[40px] rounded-xl overflow-hidden cursor-pointer"
+            >
+              <img src="src/images/parsa3.jpg" alt="profile" />
+            </figure>
+          </div>
+        </div>
+        <!-- end all header -->
+
+        <!-- add task -->
+        <div id="inpTask" class="flex items-center justify-between mt-7">
+          <input
+            class="w-full px-3 py-2 rounded-xl font-black bg-[#c4c4c4ad] focus:outline-1 focus:outline-blue-500"
+            placeholder="+ Add Task"
+            type="text"
+          />
+        </div>
+
+        <!-- tasks -->
+        <div class="mt-4 flex justify-between border-b border-b-gray-300">
+          <div class="w-full h-full flex items-center gap-2 pb-2">
+            <input
+              class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
+              type="checkbox"
+              name=""
+              id=""
+            />
+            <h5>hello</h5>
+          </div>
+          <figure>
+            <img
+              class="w-[20px] h-[20px] cursor-pointer"
+              src="src/images/trash.png"
+              alt=""
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="src/js/main.js"></script>
+</html>
