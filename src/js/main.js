@@ -1,3 +1,5 @@
+localStorage.removeItem("completedTasks");
+
 // click bg task change and other remove
 let _inp = document.querySelectorAll("#taskPannell>a");
 
@@ -15,6 +17,7 @@ _inp.forEach((value, i) => {
 
     if (flag == 1) {
       value.classList.toggle("bg-[#f1f1f1]");
+      value.classList.toggle("bg-[#c4c4c4ad]");
     }
   });
 });
@@ -50,7 +53,7 @@ function makeTask() {
         />
         <h5>${taskValue}</h5>
       </div>
-      <figure>
+      <figure onclick="trash(this)">
         <img
           class="w-[20px] h-[20px] cursor-pointer"
           src="src/images/trash.png"
@@ -60,14 +63,35 @@ function makeTask() {
     </div> `;
 }
 
+// add in all in complete
+
 let completeDiv = document.querySelector("#complete");
+
+let taskChange;
 
 function myTick(s) {
   let taskChange = s.closest(".task");
+  let taskText = taskChange.querySelector("h5").innerText;
+
   if (s.checked) {
+    // اضافه کردن به completeDiv
     completeDiv.appendChild(taskChange);
     taskChange.classList.add("opacity-50");
+    completeDiv.classList.remove("hidden");
+
+    completeDiv.classList.add("flex");
   } else {
+    // برگشت به taskdiv
+    taskdiv.appendChild(taskChange);
+    taskChange.classList.remove("opacity-50");
     taskChange.classList.add("opacity-100");
   }
+}
+
+// remove or trash
+
+function trash(s) {
+  let taskDelete = s.closest(".task");
+
+  taskDelete.remove();
 }
