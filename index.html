@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do list</title>
     <link rel="stylesheet" href="src/style/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/images/favicon.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <main
@@ -36,11 +41,12 @@
       <!-------------------------------- task pannell ------------------------->
       <section
         id="taskPannell"
-        class="w-full md:w-[20%] h-fit md:min-h-[550px] border border-black/50  bg-[#f7c236] flex flex-wrap justify-center gap-4 content-start md:pt-3 py-3 md:py-0 "
+        class="w-full md:w-[20%] h-fit md:min-h-[550px] border border-black/50 bg-[#f7c236] flex flex-wrap justify-center gap-4 content-start md:pt-3 py-3 md:py-0"
       >
         <!------------------------------ all tasks -------------------------->
         <a
-          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#f1f1f1] cursor-pointer"
+          id="btnAllTaskPage"
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#f1f1f1] cursor-pointer hover:scale-105 duration-500"
           href="#"
         >
           <figure>
@@ -54,7 +60,8 @@
         </a>
         <!---------------------------------- complete ------------------------->
         <a
-          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#c4c4c4ad] cursor-pointer"
+          id="completeBtnPage"
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 bg-[#c4c4c4ad] cursor-pointer hover:scale-105 duration-500"
           href="#"
         >
           <figure>
@@ -68,7 +75,8 @@
         </a>
         <!---------------------------------- trash --------------------------->
         <a
-          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 cursor-pointer bg-[#c4c4c4ad]"
+          id="btnTrashPage"
+          class="flex items-center gap-2 w-[90%] h-fit rounded-2xl p-2 cursor-pointer bg-[#c4c4c4ad] hover:scale-105 duration-500"
           href="#"
         >
           <figure>
@@ -83,7 +91,7 @@
       >
         <!-- all header -->
         <div class="flex items-center justify-between">
-          <h6>All</h6>
+          <h6 class="text-2xl font-bold">All Tasks</h6>
           <div class="flex items-center justify-between gap-3">
             <div class="relative flex items-center">
               <input class="border p-0.5" type="text" name="" id="" />
@@ -114,7 +122,7 @@
             type="text"
           />
           <button
-            class="absolute right-5 px-2 py-1 text-white font-bold text-sm rounded-sm bg-gray-500 cursor-pointer"
+            class="absolute right-5 px-2 py-1 text-white font-bold text-sm rounded-sm bg-gray-500 cursor-pointer hover:scale-105 duration-500"
           >
             Add Task
           </button>
@@ -126,6 +134,58 @@
         <!-- Complete -->
         <div id="complete" class="w-full h-fit mt-5 flex-wrap hidden">
           <h2 class="w-full text-sm text-gray-600">Complete</h2>
+        </div>
+        <!----------------------------------- page trash ------------------->
+        <div
+          class="absolute right-5 top-[242px] md:top-5 w-[92%] md:w-[71%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
+          id="trashPage"
+        >
+          <!-- all header -->
+          <div class="flex items-center justify-between">
+            <h6 class="text-2xl font-bold">Trash Tasks</h6>
+            <div class="flex items-center justify-between gap-3">
+              <div class="relative flex items-center">
+                <input class="border p-0.5" type="text" name="" id="" />
+                <img
+                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  src="src/images/search.png"
+                  alt=""
+                />
+              </div>
+              <!-- profile picture -->
+              <figure
+                class="w-[40px] h-[40px] rounded-xl overflow-hidden cursor-pointer"
+              >
+                <img src="src/images/parsa3.jpg" alt="profile" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <!----------------------------------- complete trash ------------------->
+        <div
+          class="absolute right-5 top-[242px] md:top-5 w-[92%] md:w-[71%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
+          id="completePage"
+        >
+          <!-- all header -->
+          <div class="flex items-center justify-between">
+            <h6 class="text-2xl font-bold">Completed Tasks</h6>
+            <div class="flex items-center justify-between gap-3">
+              <div class="relative flex items-center">
+                <input class="border p-0.5" type="text" name="" id="" />
+                <img
+                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  src="src/images/search.png"
+                  alt=""
+                />
+              </div>
+              <!-- profile picture -->
+              <figure
+                class="w-[40px] h-[40px] rounded-xl overflow-hidden cursor-pointer"
+              >
+                <img src="src/images/parsa3.jpg" alt="profile" />
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
     </main>
