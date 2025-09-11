@@ -107,9 +107,7 @@ function myTick(s) {
 function trash(s) {
   const task = s.closest(".task");
 
-
   if (task.parentElement === trashPage) {
-
     task.remove();
     saveTasks();
     return;
@@ -144,6 +142,8 @@ btnTrashPage.addEventListener("click", () => {
   taskdiv.classList.add("hidden");
   dayPage.classList.remove("flex");
   dayPage.classList.add("hidden");
+  profilePage.classList.remove("flex");
+  profilePage.classList.add("hidden");
 });
 
 // all task page
@@ -157,6 +157,8 @@ btnAllTaskPage.addEventListener("click", () => {
   taskdiv.classList.add("block");
   dayPage.classList.remove("flex");
   dayPage.classList.add("hidden");
+  profilePage.classList.remove("flex");
+  profilePage.classList.add("hidden");
 });
 
 // compelte page task add in
@@ -167,6 +169,8 @@ completeBtnPage.addEventListener("click", () => {
   taskdiv.classList.add("hidden");
   dayPage.classList.remove("flex");
   dayPage.classList.add("hidden");
+  profilePage.classList.remove("flex");
+  profilePage.classList.add("hidden");
 });
 
 // add search
@@ -212,6 +216,8 @@ let taskBtn = document.querySelector("#taskBtn");
 taskBtn.addEventListener("click", () => {
   dayPage.classList.remove("flex");
   dayPage.classList.add("hidden");
+  profilePage.classList.remove("flex");
+  profilePage.classList.add("hidden");
 });
 
 // daypage
@@ -220,6 +226,8 @@ let dayPage = document.querySelector("#dayPage");
 dayBtn.addEventListener("click", () => {
   dayPage.classList.remove("hidden");
   dayPage.classList.add("flex");
+  profilePage.classList.remove("flex");
+  profilePage.classList.add("hidden");
 });
 
 function day(s) {
@@ -268,4 +276,14 @@ window.addEventListener("DOMContentLoaded", () => {
       dayPage.appendChild(lastTask);
     }
   });
+});
+
+// click profile front end developer
+
+// profilepage
+let profileBtn = document.querySelector("#profile");
+let profilePage = document.querySelector("#profilePage");
+profileBtn.addEventListener("click", () => {
+  profilePage.classList.remove("hidden");
+  profilePage.classList.add("flex");
 });
