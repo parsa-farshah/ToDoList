@@ -26,9 +26,17 @@ let createTaskBtn = document.querySelector("#inpTask>button");
 let taskdiv = document.getElementById("taskAdd");
 let taskValue = "";
 
+// error task empty
+let errorEmpty = document.querySelector("#errorEmpty");
+
 createTaskBtn.addEventListener("click", () => {
   if (inpTaskUser.children[0].value === "") {
-    alert("enter task");
+    errorEmpty.classList.remove("right-full");
+    errorEmpty.classList.add("right-0");
+    setTimeout(() => {
+      errorEmpty.classList.remove("right-0");
+      errorEmpty.classList.add("right-full");
+    }, 5000);
   } else {
     taskValue = inpTaskUser.children[0].value;
     makeTask();
