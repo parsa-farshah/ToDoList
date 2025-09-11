@@ -87,15 +87,15 @@
       </section>
       <!-- task all make -->
       <section
-        class="w-full md:w-[73%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9"
+        class="w-full md:w-[73%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 relative"
       >
         <!-- all header -->
-        <div class="flex items-center justify-between">
-          <h6 class="text-[12px] sm:text-2xl font-bold">All Tasks</h6>
+        <div id="allTaskPage" class="flex items-center justify-between">
+          <h6 class="text-[10px] sm:text-2xl font-bold">All Tasks</h6>
           <div class="flex items-center justify-between gap-3">
             <div class="relative flex items-center">
               <input
-                class="border w-[170px] md:w-[220px] px-2"
+                class="border w-[150px] md:w-[220px] px-2"
                 placeholder="serach"
                 type="text"
                 name=""
@@ -143,15 +143,20 @@
         </div>
         <!----------------------------------- page trash ------------------->
         <div
-          class="absolute right-5 top-[242px] md:top-5 w-[92%] md:w-[71%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
+          class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
           id="trashPage"
         >
           <!-- all header -->
           <div class="flex items-center justify-between">
-            <h6 class="text-[12px] sm:text-2xl font-bold">Trash Tasks</h6>
+            <h6 class="text-[10px] sm:text-2xl font-bold">Trash Tasks</h6>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
-                <input class="border w-[170px] md:w-[220px] px-2" type="text" name="" id="" />
+                <input
+                  class="border w-[150px] md:w-[220px] px-2"
+                  type="text"
+                  name=""
+                  id=""
+                />
                 <img
                   class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
                   src="src/images/search.png"
@@ -169,15 +174,20 @@
         </div>
         <!----------------------------------- complete ------------------->
         <div
-          class="absolute right-5 top-[242px] md:top-5 w-[92%] md:w-[71%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
+          class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
           id="completePage"
         >
           <!-- all header -->
           <div class="flex items-center justify-between">
-            <h6 class="text-[12px] sm:text-2xl font-bold">Completed Tasks</h6>
+            <h6 class="text-[10px] sm:text-2xl font-bold">Completed Tasks</h6>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
-                <input class="border w-[170px] md:w-[220px] px-2" type="text" name="" id="" />
+                <input
+                  class="border w-[150px] md:w-[220px] px-2"
+                  type="text"
+                  name=""
+                  id=""
+                />
                 <img
                   class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
                   src="src/images/search.png"
