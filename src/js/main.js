@@ -128,7 +128,7 @@ completeBtnPage.addEventListener("click", () => {
 let searchInp = document.querySelector("#search");
 searchInp.addEventListener("keyup", (e) => {
   let allTasks = document.querySelectorAll("#allTask>h5");
-  let searchVal = e.target.value;
+  let searchVal = e.target.value.toLowerCase();
   allTasks.forEach((val) => {
     // بعد شرط بگذاریم
     if (val.innerText.toLowerCase().indexOf(searchVal) >= 0) {
