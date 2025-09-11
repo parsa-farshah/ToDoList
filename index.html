@@ -85,7 +85,7 @@
           <h6 class="text-sm">Trash</h6>
         </a>
       </section>
-      <!-- task all make -->
+      <!---------------------------------- task all make ------------------->
       <section
         class="w-full md:w-[73%] min-h-[400px] md:min-h-[550px] border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 relative"
       >
@@ -95,7 +95,7 @@
           <div class="flex items-center justify-between gap-3">
             <div class="relative flex items-center">
               <input
-                class="border w-[150px] md:w-[220px] px-2"
+                class="border w-[150px] md:w-[220px] py-2 md:px-3 px-2 bg-[#f7c236] border-none rounded-2xl"
                 placeholder="serach"
                 type="text"
                 name=""
@@ -146,13 +146,13 @@
           class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
           id="trashPage"
         >
-          <!-- all header -->
           <div class="flex items-center justify-between">
             <h6 class="text-[10px] sm:text-2xl font-bold">Trash Tasks</h6>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
                 <input
-                  class="border w-[150px] md:w-[220px] px-2"
+                  class="border w-[150px] md:w-[220px] md:py-2 md:px-3 px-2 bg-[#f7c236]border-none rounded-2xl"
+                  placeholder="serach"
                   type="text"
                   name=""
                   id=""
@@ -177,13 +177,13 @@
           class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
           id="completePage"
         >
-          <!-- all header -->
           <div class="flex items-center justify-between">
             <h6 class="text-[10px] sm:text-2xl font-bold">Completed Tasks</h6>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
                 <input
-                  class="border w-[150px] md:w-[220px] px-2"
+                  class="border w-[150px] md:w-[220px] md:py-2 md:px-3 px-2 bg-[#f7c236]border-none rounded-2xl"
+                  placeholder="serach"
                   type="text"
                   name=""
                   id=""
@@ -204,6 +204,18 @@
           </div>
         </div>
       </section>
+      <!----------------------------- error if task input empty ----------------------->
+      <div
+        id="errorEmpty"
+        class="w-full absolute top-0 right-full h-full bg-black/60 flex justify-center items-center duration-300"
+      >
+        <div
+          class="w-[200px] h-[200px] border-4 border-amber-800 bg-amber-500 rounded-3xl flex flex-col justify-center items-center"
+        >
+          <img src="src/images/error.png" alt="" />
+          <h4 class="font-bold text-sm">Task input is empty</h4>
+        </div>
+      </div>
     </main>
   </body>
   <script src="src/js/main.js"></script>
