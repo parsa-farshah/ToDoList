@@ -96,7 +96,6 @@ function trash(s) {
   taskDelete.classList.add("opacity-40");
   taskDelete.classList.add("select-none");
   trashPage.appendChild(taskDelete);
-  console.log(trashAdd.appendChild(taskDelete));
 }
 
 // trash page
@@ -107,9 +106,13 @@ let btnAllTaskPage = document.querySelector("#btnAllTaskPage");
 let completePage = document.querySelector("#completePage");
 let completeBtnPage = document.querySelector("#completeBtnPage");
 
+let allTaskPageDiv = document.getElementById("allTaskPage");
+
 btnTrashPage.addEventListener("click", () => {
   trashPage.classList.remove("hidden");
   completePage.classList.add("hidden");
+  allTaskPageDiv.classList.add("hidden");
+  taskdiv.classList.add("hidden");
 });
 
 // all task page
@@ -117,21 +120,29 @@ btnTrashPage.addEventListener("click", () => {
 btnAllTaskPage.addEventListener("click", () => {
   trashPage.classList.add("hidden");
   completePage.classList.add("hidden");
+  allTaskPageDiv.classList.remove("hidden");
+  allTaskPageDiv.classList.add("flex");
+  taskdiv.classList.remove("hidden");
+  taskdiv.classList.add("block");
 });
 
 // compelte page task add in
 completeBtnPage.addEventListener("click", () => {
   completePage.classList.remove("hidden");
+  allTaskPageDiv.classList.add("hidden");
+  allTaskPageDiv.classList.remove("flex");
+  taskdiv.classList.add("hidden");
 });
 
 // add search
 let searchInp = document.querySelector("#search");
 searchInp.addEventListener("keyup", (e) => {
   let allTasks = document.querySelectorAll("#allTask>h5");
-  let searchVal = e.target.value.toLowerCase();
+  let searchVal = e.target.value.toLowerCase().trim();
   allTasks.forEach((val) => {
     // بعد شرط بگذاریم
-    if (val.innerText.toLowerCase().indexOf(searchVal) >= 0) {
+    let text = val.innerText.toLowerCase().trim();
+    if (text.startsWith(searchVal)) {
       val.parentElement.parentElement.classList.remove("hidden");
       val.parentElement.parentElement.classList.add("flex");
     } else {
