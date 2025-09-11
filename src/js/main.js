@@ -40,6 +40,7 @@ createTaskBtn.addEventListener("click", () => {
   } else {
     taskValue = inpTaskUser.children[0].value;
     makeTask();
+    saveTasks();
   }
 
   // reset
@@ -49,7 +50,7 @@ createTaskBtn.addEventListener("click", () => {
 
 function makeTask() {
   taskdiv.innerHTML += `
-    <div  class=" task w-full mt-4 flex justify-between border-b border-b-gray-300">
+    <div  class="task w-full h-fit mt-4 flex justify-between items-center border-b border-b-gray-300">
       <div id="allTask" class="w-full h-full flex items-center gap-2 pb-2">
         <input
         onclick="myTick(this)"
@@ -59,13 +60,18 @@ function makeTask() {
         />
         <h5 class="text-xl font-bold capitalize">${taskValue}</h5>
       </div>
-      <figure onclick="trash(this)" class="hover:scale-125 duration-500">
-        <img
-          class="w-[20px] h-[20px] cursor-pointer"
-          src="src/images/trash.png"
-          alt=""
-        />
-      </figure>
+      <div class="flex gap-2">
+        <figure onclick="day(this)" class="hover:scale-125 duration-500">
+          <img class="w-[20px] h-[20px] cursor-pointer" src="src/images/day.png" alt="dat" />
+        </figure>
+        <figure onclick="trash(this)" class="hover:scale-125 duration-500">
+          <img
+            class="w-[20px] h-[20px] cursor-pointer"
+            src="src/images/trash.png"
+            alt=""
+          />
+        </figure>
+      </div>
     </div> `;
 }
 
@@ -99,11 +105,26 @@ function myTick(s) {
 // remove or trash
 
 function trash(s) {
-  let taskDelete = s.closest(".task");
-  taskDelete.remove();
-  taskDelete.classList.add("opacity-40");
-  taskDelete.classList.add("select-none");
-  trashPage.appendChild(taskDelete);
+  const task = s.closest(".task");
+
+
+  if (task.parentElement === trashPage) {
+
+    task.remove();
+    saveTasks();
+    return;
+  }
+
+  // اگر هنوز داخل trash نیست => منتقل کن به trashPage (قابل بازیابی)
+  // اگه چک‌باکس زده بود غیر فعالش کن
+  const cb = task.querySelector('input[type="checkbox"]');
+  if (cb) cb.checked = false;
+
+  task.classList.add("opacity-40", "select-none");
+  // appendChild خودش عنصر رو از parent قبلی جدا میکنه و به trashPage اضافه میکنه
+  trashPage.appendChild(task);
+
+  saveTasks();
 }
 
 // trash page
@@ -121,6 +142,8 @@ btnTrashPage.addEventListener("click", () => {
   completePage.classList.add("hidden");
   allTaskPageDiv.classList.add("hidden");
   taskdiv.classList.add("hidden");
+  dayPage.classList.remove("flex");
+  dayPage.classList.add("hidden");
 });
 
 // all task page
@@ -132,6 +155,8 @@ btnAllTaskPage.addEventListener("click", () => {
   allTaskPageDiv.classList.add("flex");
   taskdiv.classList.remove("hidden");
   taskdiv.classList.add("block");
+  dayPage.classList.remove("flex");
+  dayPage.classList.add("hidden");
 });
 
 // compelte page task add in
@@ -140,6 +165,8 @@ completeBtnPage.addEventListener("click", () => {
   allTaskPageDiv.classList.add("hidden");
   allTaskPageDiv.classList.remove("flex");
   taskdiv.classList.add("hidden");
+  dayPage.classList.remove("flex");
+  dayPage.classList.add("hidden");
 });
 
 // add search
@@ -156,6 +183,89 @@ searchInp.addEventListener("keyup", (e) => {
     } else {
       val.parentElement.parentElement.classList.add("hidden");
       val.parentElement.parentElement.classList.remove("flex");
+    }
+  });
+});
+
+// pannel click
+
+let panellBtn = document.querySelectorAll("#panellBtn>figure");
+
+panellBtn.forEach((value, index) => {
+  value.addEventListener("click", () => {
+    panellBtn.forEach((item, i) => {
+      if (index != i) {
+        item.classList.add("bg-white");
+        item.classList.remove("bg-gray-200");
+      } else {
+        item.classList.remove("bg-white");
+        item.classList.add("bg-gray-200");
+      }
+    });
+  });
+});
+
+// for day task and tasks
+
+// taskPage
+let taskBtn = document.querySelector("#taskBtn");
+taskBtn.addEventListener("click", () => {
+  dayPage.classList.remove("flex");
+  dayPage.classList.add("hidden");
+});
+
+// daypage
+let dayBtn = document.querySelector("#dayBtn");
+let dayPage = document.querySelector("#dayPage");
+dayBtn.addEventListener("click", () => {
+  dayPage.classList.remove("hidden");
+  dayPage.classList.add("flex");
+});
+
+function day(s) {
+  let dayTask = s.closest(".task");
+  dayPage.appendChild(dayTask);
+}
+
+function saveTasks() {
+  let allTasks = [];
+
+  document.querySelectorAll(".task").forEach((task) => {
+    let text = task.querySelector("h5").innerText;
+    let status = "active";
+
+    if (task.parentElement.id === "completePage") {
+      status = "complete";
+    } else if (task.parentElement.id === "trashPage") {
+      status = "trash";
+    } else if (task.parentElement.id === "dayPage") {
+      status = "day";
+    }
+
+    allTasks.push({ text, status });
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(allTasks));
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  let saved = JSON.parse(localStorage.getItem("tasks")) || [];
+  saved.forEach((t) => {
+    taskValue = t.text;
+    makeTask();
+
+    // آخرین تسک ساخته شده
+    let lastTask = taskdiv.querySelector(".task:last-child");
+
+    // بر اساس status جابجا کن
+    if (t.status === "complete") {
+      completePage.appendChild(lastTask);
+      lastTask.classList.add("opacity-50");
+    } else if (t.status === "trash") {
+      trashPage.appendChild(lastTask);
+      lastTask.classList.add("opacity-40", "select-none");
+    } else if (t.status === "day") {
+      dayPage.appendChild(lastTask);
     }
   });
 });

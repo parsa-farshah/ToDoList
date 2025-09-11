@@ -17,25 +17,28 @@
     >
       <!------------------------------- panell ------------------->
       <section
+        id="panellBtn"
         class="w-[100%] md:w-[7%] h-fit md:min-h-[550px] border border-black/50 bg-[#f7c236] flex flex-wrap md:content-start items-center justify-center gap-10 py-3 md:py-0"
       >
         <!-------------------------- profile picture ---------------->
         <figure
-          class="w-[35px] md:w-[60%] rounded-xl overflow-hidden mt-0 md:mt-3 cursor-pointer"
+          class="w-[35px] md:w-[50%] p-1 rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500 bg-white flex justify-center items-center mt-0 md:mt-3"
         >
-          <img src="src/images/parsa3.jpg" alt="profile" />
+          <img class="rounded-xl" src="src/images/parsa3.jpg" alt="profile" />
         </figure>
-        <!------------------ task icon ------------------------->
+        <!--------------------------- task icon ------------------------------------->
         <figure
-          class="w-[35px] md:w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+          id="taskBtn"
+          class="w-[35px] md:w-[50%] p-1 rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500 bg-gray-200 flex justify-center items-center"
         >
-          <img src="src/images/task.png" alt="task" />
+          <img class="w-[90%]" src="src/images/task.png" alt="task" />
         </figure>
-        <!------------------------------ search icon ----------------------->
+        <!------------------------------ day icon ----------------------->
         <figure
-          class="w-[35px] md:w-[40%] rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500"
+          id="dayBtn"
+          class="w-[35px] md:w-[50%] p-1 rounded-xl overflow-hidden cursor-pointer hover:scale-125 duration-500 bg-white flex justify-center items-center"
         >
-          <img src="src/images/search.png" alt="search" />
+          <img src="src/images/day.png" alt="dat" />
         </figure>
       </section>
       <!-------------------------------- task pannell ------------------------->
@@ -91,7 +94,10 @@
       >
         <!-- all header -->
         <div id="allTaskPage" class="flex items-center justify-between">
-          <h6 class="text-[10px] sm:text-2xl font-bold">All Tasks</h6>
+          <div class="flex items-center gap-4">
+              <h6 class="text-[10px] sm:text-2xl font-bold">All Tasks</h6>
+              <img class="w-[35px] h-[35px]" src="src/images/task.png" alt="">
+            </div>
           <div class="flex items-center justify-between gap-3">
             <div class="relative flex items-center">
               <input
@@ -147,11 +153,14 @@
           id="trashPage"
         >
           <div class="flex items-center justify-between">
-            <h6 class="text-[10px] sm:text-2xl font-bold">Trash Tasks</h6>
+            <div class="flex items-center gap-4">
+              <h6 class="text-[10px] sm:text-2xl font-bold">Trash Tasks</h6>
+              <img class="w-[35px] h-[35px]" src="src/images/trash.png" alt="">
+            </div>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
                 <input
-                  class="border w-[150px] md:w-[220px] md:py-2 md:px-3 px-2 bg-[#f7c236]border-none rounded-2xl"
+                  class="border-none w-[150px] md:w-[220px] py-2 md:px-3 px-2 bg-[#f7c236] rounded-2xl"
                   placeholder="serach"
                   type="text"
                   name=""
@@ -172,17 +181,54 @@
             </div>
           </div>
         </div>
-        <!----------------------------------- complete ------------------->
+        <!----------------------------------- page complete  ------------------->
         <div
           class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden"
           id="completePage"
         >
           <div class="flex items-center justify-between">
-            <h6 class="text-[10px] sm:text-2xl font-bold">Completed Tasks</h6>
+            <div class="flex items-center gap-4">
+              <h6 class="text-[10px] sm:text-2xl font-bold">Complete Tasks</h6>
+              <img class="w-[35px] h-[35px]" src="src/images/complete.png" alt="">
+            </div>
             <div class="flex items-center justify-between gap-3">
               <div class="relative flex items-center">
                 <input
-                  class="border w-[150px] md:w-[220px] md:py-2 md:px-3 px-2 bg-[#f7c236]border-none rounded-2xl"
+                  class="border-none w-[150px] md:w-[220px] py-2 md:px-3 px-2 bg-[#f7c236] rounded-2xl"
+                  placeholder="serach"
+                  type="text"
+                  name=""
+                  id=""
+                />
+                <img
+                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  src="src/images/search.png"
+                  alt=""
+                />
+              </div>
+              <!-- profile picture -->
+              <figure
+                class="w-[40px] h-[40px] rounded-xl overflow-hidden cursor-pointer"
+              >
+                <img src="src/images/parsa3.jpg" alt="profile" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <!----------------------------------- page day ------------------->
+        <div
+          class="absolute w-full h-full right-0 mx-auto top-0 border border-gray-400 bg-[#fff6e4] inset-shadow-sm inset-shadow-black/90 px-5 py-9 hidden flex-col flex-wrap"
+          id="dayPage"
+        >
+          <div class="w-full flex justify-between">
+            <div class="flex items-center gap-4">
+              <h6 class="text-[10px] sm:text-2xl font-bold">Today Tasks</h6>
+              <img class="w-[35px] h-[35px]" src="src/images/day.png" alt="">
+            </div>
+            <div class="flex h-fit items-center justify-between gap-3">
+              <div class="relative flex items-center">
+                <input
+                  class="border-none w-[150px] md:w-[220px] py-2 md:px-3 px-2 bg-[#f7c236] rounded-2xl"
                   placeholder="serach"
                   type="text"
                   name=""
