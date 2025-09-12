@@ -1,0 +1,14 @@
+@import "tailwindcss";
+/* npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch */
+
+@layer utilities {
+  .bg2theme1 {
+    @apply bg-[url(../images/bg2theme1.jpg)] bg-cover;
+  }
+  .bg1theme2 {
+    @apply bg-[url(../images/bg1theme2.jpg)] bg-cover;
+  }
+  .bg2theme2 {
+    @apply bg-[url(../images/bg9theme2.jpg)] bg-cover;
+  }
+}
