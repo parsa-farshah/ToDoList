@@ -7,11 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-800: oklch(47.3% 0.137 46.201);
+    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -330,6 +331,9 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-0\.5 {
     gap: calc(var(--spacing) * 0.5);
   }
@@ -430,14 +434,35 @@
       border-left-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
   }
+  .bg-\[\#0cdb28\] {
+    background-color: #0cdb28;
+  }
+  .bg-\[\#3d14ff\] {
+    background-color: #3d14ff;
+  }
   .bg-\[\#006bab\] {
     background-color: #006bab;
+  }
+  .bg-\[\#7c73ff\] {
+    background-color: #7c73ff;
   }
   .bg-\[\#14b5ff\] {
     background-color: #14b5ff;
   }
   .bg-\[\#75d5ff\] {
     background-color: #75d5ff;
+  }
+  .bg-\[\#078e1a\] {
+    background-color: #078e1a;
+  }
+  .bg-\[\#78fd89\] {
+    background-color: #78fd89;
+  }
+  .bg-\[\#523bff\] {
+    background-color: #523bff;
+  }
+  .bg-\[\#2401d6\] {
+    background-color: #2401d6;
   }
   .bg-\[\#c4c4c4ad\] {
     background-color: #c4c4c4ad;
@@ -453,9 +478,6 @@
   }
   .bg-\[\#ffff00\] {
     background-color: #ffff00;
-  }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
   }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
@@ -478,8 +500,20 @@
   .bg-gray-500 {
     background-color: var(--color-gray-500);
   }
+  .bg-green-600 {
+    background-color: var(--color-green-600);
+  }
+  .bg-purple-600 {
+    background-color: var(--color-purple-600);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\.\.\/images\/bg1theme1\.jpg\)\] {
+    background-image: url(../images/bg1theme1.jpg);
+  }
+  .bg-\[url\(\.\.\/images\/bg1theme2\.jpg\)\] {
+    background-image: url(../images/bg1theme2.jpg);
   }
   .object-cover {
     object-fit: cover;
@@ -784,6 +818,20 @@
         max-width: 96rem;
       }
     }
+  }
+}
+@layer utilities {
+  .bg2theme1 {
+    background-image: url(../images/bg2theme1.jpg);
+    background-size: cover;
+  }
+  .bg2theme2 {
+    background-image: url(../images/bg6theme2.jpg);
+    background-size: cover;
+  }
+  .bg1theme2 {
+    background-image: url(../images/bg1theme2.jpg);
+    background-size: cover;
   }
 }
 @property --tw-translate-x {

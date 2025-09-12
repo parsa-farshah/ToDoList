@@ -178,10 +178,10 @@
                   placeholder="serach"
                   type="text"
                   name=""
-                  id=""
+                  id="searchTrash"
                 />
                 <img
-                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  class="absolute cursor-pointer top-1/2 right-2 -translate-y-1/2 w-[25px] h-[25px]"
                   src="src/images/search.png"
                   alt=""
                 />
@@ -216,10 +216,10 @@
                   placeholder="serach"
                   type="text"
                   name=""
-                  id=""
+                  id="searchComplete"
                 />
                 <img
-                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  class="absolute cursor-pointer top-1/2 right-2 -translate-y-1/2 w-[25px] h-[25px]"
                   src="src/images/search.png"
                   alt=""
                 />
@@ -250,10 +250,10 @@
                   placeholder="serach"
                   type="text"
                   name=""
-                  id=""
+                  id="todaySearch"
                 />
                 <img
-                  class="absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 w-[25px] h-[25px]"
+                  class="absolute cursor-pointer top-1/2 right-2 -translate-y-1/2 w-[25px] h-[25px]"
                   src="src/images/search.png"
                   alt=""
                 />
@@ -275,7 +275,8 @@
           <div class="w-full h-full flex justify-center items-center">
             <div class="w-[300px] h-[450px] flex justify-center items-center">
               <div
-                class="w-[100%] h-full bg-amber-300 rounded-3xl overflow-hidden p-2"
+                id="profileBg"
+                class="w-[100%] h-full bg-[#ffff00] rounded-3xl overflow-hidden p-2"
               >
                 <figure class="w-full rounded-3xl overflow-hidden">
                   <img
@@ -339,7 +340,7 @@
           class="absolute w-full h-[500px] md:h-full right-0 mx-auto top-0 border border-gray-400 bg-[#f4ffc1] inset-shadow-sm inset-shadow-black/90 px-5 hidden flex-col flex-wrap"
           id="themePage"
         >
-          <div class="w-full h-full flex gap-4 p-5">
+          <div class="w-full h-fit flex flex-wrap justify-start content-start gap-4 p-5">
             <!-- default color -->
             <div
               id="defaultColor"
@@ -350,6 +351,28 @@
               id="blueColor"
               class="w-[80px] h-[80px] bg-blue-500 inset-shadow-sm inset-shadow-black/90 rounded-3xl border-2 cursor-pointer"
             ></div>
+            <!-- purple color -->
+            <div
+              id="purpleColor"
+              class="w-[80px] h-[80px] bg-purple-600 inset-shadow-sm inset-shadow-black/90 rounded-3xl border-2 cursor-pointer"
+            ></div>
+            <!-- green color -->
+            <div
+              id="greenColor"
+              class="w-[80px] h-[80px] bg-green-600 inset-shadow-sm inset-shadow-black/90 rounded-3xl border-2 cursor-pointer"
+            ></div>
+            <!-- bg1 color -->
+            <div
+              id="bg1"
+              class="w-[80px] h-[80px] bg-[url(../images/bg1theme1.jpg)] inset-shadow-sm inset-shadow-black/90 rounded-3xl border-2 cursor-pointer"
+            ></div>
+                       <!-- bg2 color -->
+            <div
+              id="bg2"
+              class="w-[80px] h-[80px] bg-[url(../images/bg1theme2.jpg)] inset-shadow-sm inset-shadow-black/90 rounded-3xl border-2 cursor-pointer"
+            ></div>
+          </div>
+
           </div>
         </div>
       </section>
