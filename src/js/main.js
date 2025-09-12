@@ -144,6 +144,8 @@ btnTrashPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // all task page
@@ -159,6 +161,8 @@ btnAllTaskPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // compelte page task add in
@@ -171,6 +175,8 @@ completeBtnPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // add search
@@ -218,6 +224,8 @@ taskBtn.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // daypage
@@ -228,6 +236,8 @@ dayBtn.addEventListener("click", () => {
   dayPage.classList.add("flex");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 function day(s) {
@@ -286,4 +296,687 @@ let profilePage = document.querySelector("#profilePage");
 profileBtn.addEventListener("click", () => {
   profilePage.classList.remove("hidden");
   profilePage.classList.add("flex");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
+});
+
+// theme pages
+
+let themeBtn = document.querySelector("#themeBtn");
+let themePage = document.querySelector("#themePage");
+
+themeBtn.addEventListener("click", () => {
+  themePage.classList.remove("hidden");
+  themePage.classList.add("flex");
+});
+
+// default color
+
+let defaultColor = document.querySelector("#defaultColor");
+
+let _body = document.querySelector("#body");
+let _main = document.querySelector("#main");
+let taskPannell = document.querySelector("#taskPannell");
+let taskAllpage = document.querySelector("#taskAllpage");
+let panell = document.querySelector("#panellBtn");
+let searchTrash = document.querySelector("#searchTrash");
+let searchComplete = document.querySelector("#searchComplete");
+let todaySearch = document.querySelector("#todaySearch");
+let profileBg = document.querySelector("#profileBg");
+
+defaultColor.addEventListener("click", () => {
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  searchInp.classList.remove("bg-[#14b5ff]");
+  searchTrash.classList.remove("bg-[#14b5ff]");
+  searchComplete.classList.remove("bg-[#14b5ff]");
+  todaySearch.classList.remove("bg-[#14b5ff]");
+  profileBg.classList.remove("bg-[#14b5ff]");
+  // remove purple
+
+  _body.classList.remove("bg-[#2401d6]");
+  _main.classList.remove("bg-[#2401d6]");
+  panell.classList.remove("bg-[#523bff]");
+  taskPannell.classList.remove("bg-[#7c73ff]");
+  taskAllpage.classList.remove("bg-[#7c73ff]");
+  trashPage.classList.remove("bg-[#7c73ff]");
+  completePage.classList.remove("bg-[#7c73ff]");
+  dayPage.classList.remove("bg-[#7c73ff]");
+  profilePage.classList.remove("bg-[#7c73ff]");
+  themePage.classList.remove("bg-[#7c73ff]");
+  searchInp.classList.remove("bg-[#3d14ff]");
+  searchTrash.classList.remove("bg-[#3d14ff]");
+  searchComplete.classList.remove("bg-[#3d14ff]");
+  todaySearch.classList.remove("bg-[#3d14ff]");
+  profileBg.classList.remove("bg-[#3d14ff]");
+
+  ///////////////////// remove green
+
+  _body.classList.remove("bg-[#078e1a]");
+  _main.classList.remove("bg-[#078e1a]");
+  panell.classList.remove("bg-[#0cdb28]");
+  taskPannell.classList.remove("bg-[#78fd89]");
+  taskAllpage.classList.remove("bg-[#78fd89]");
+  trashPage.classList.remove("bg-[#78fd89]");
+  completePage.classList.remove("bg-[#78fd89]");
+  dayPage.classList.remove("bg-[#78fd89]");
+  profilePage.classList.remove("bg-[#78fd89]");
+  themePage.classList.remove("bg-[#78fd89]");
+  searchInp.classList.remove("bg-[#0cdb28]");
+  searchTrash.classList.remove("bg-[#0cdb28]");
+  searchComplete.classList.remove("bg-[#0cdb28]");
+  todaySearch.classList.remove("bg-[#0cdb28]");
+  profileBg.classList.remove("bg-[#0cdb28]");
+
+  //remove bg1
+
+  _body.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.remove("bg2theme1");
+  taskPannell.classList.remove("bg2theme1");
+  taskAllpage.classList.remove("bg2theme1");
+  trashPage.classList.remove("bg2theme1");
+  completePage.classList.remove("bg2theme1");
+  dayPage.classList.remove("bg2theme1");
+  profilePage.classList.remove("bg2theme1");
+  themePage.classList.remove("bg2theme1");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+      //remove bg2
+
+  _body.classList.remove("bg1theme2");
+  _main.classList.remove("bg1theme2");
+  panell.classList.remove("bg2theme2");
+  taskPannell.classList.remove("bg2theme2");
+  taskAllpage.classList.remove("bg2theme2");
+  trashPage.classList.remove("bg2theme2");
+  completePage.classList.remove("bg2theme2");
+  dayPage.classList.remove("bg2theme2");
+  profilePage.classList.remove("bg2theme2");
+  themePage.classList.remove("bg2theme2");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  // add
+  _body.classList.add("bg-[#d1bf00]");
+  _main.classList.add("bg-[#d1bf00]");
+  panell.classList.add("bg-[#ffff00]");
+  taskPannell.classList.add("bg-[#f4ffc1]");
+  taskAllpage.classList.add("bg-[#f4ffc1]");
+  trashPage.classList.add("bg-[#f4ffc1]");
+  completePage.classList.add("bg-[#f4ffc1]");
+  dayPage.classList.add("bg-[#f4ffc1]");
+  profilePage.classList.add("bg-[#f4ffc1]");
+  themePage.classList.add("bg-[#f4ffc1]");
+  searchInp.classList.add("bg-[#ffff00]");
+  searchTrash.classList.add("bg-[#ffff00]");
+  searchComplete.classList.add("bg-[#ffff00]");
+  todaySearch.classList.add("bg-[#ffff00]");
+  profileBg.classList.add("bg-[#ffff00]");
+});
+
+/////////////////////////////// blue theme
+let blueColor = document.querySelector("#blueColor");
+
+blueColor.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  searchInp.classList.remove("bg-[#ffff00]");
+  searchTrash.classList.remove("bg-[#ffff00]");
+  searchComplete.classList.remove("bg-[#ffff00]");
+  todaySearch.classList.remove("bg-[#ffff00]");
+  profileBg.classList.remove("bg-[#ffff00]");
+  // remove purple
+
+  _body.classList.remove("bg-[#2401d6]");
+  _main.classList.remove("bg-[#2401d6]");
+  panell.classList.remove("bg-[#523bff]");
+  taskPannell.classList.remove("bg-[#7c73ff]");
+  taskAllpage.classList.remove("bg-[#7c73ff]");
+  trashPage.classList.remove("bg-[#7c73ff]");
+  completePage.classList.remove("bg-[#7c73ff]");
+  dayPage.classList.remove("bg-[#7c73ff]");
+  profilePage.classList.remove("bg-[#7c73ff]");
+  themePage.classList.remove("bg-[#7c73ff]");
+  searchInp.classList.remove("bg-[#3d14ff]");
+  searchTrash.classList.remove("bg-[#3d14ff]");
+  searchComplete.classList.remove("bg-[#3d14ff]");
+  todaySearch.classList.remove("bg-[#3d14ff]");
+  profileBg.classList.remove("bg-[#3d14ff]");
+
+  ///////////////////// remove green
+
+  _body.classList.remove("bg-[#078e1a]");
+  _main.classList.remove("bg-[#078e1a]");
+  panell.classList.remove("bg-[#0cdb28]");
+  taskPannell.classList.remove("bg-[#78fd89]");
+  taskAllpage.classList.remove("bg-[#78fd89]");
+  trashPage.classList.remove("bg-[#78fd89]");
+  completePage.classList.remove("bg-[#78fd89]");
+  dayPage.classList.remove("bg-[#78fd89]");
+  profilePage.classList.remove("bg-[#78fd89]");
+  themePage.classList.remove("bg-[#78fd89]");
+  searchInp.classList.remove("bg-[#0cdb28]");
+  searchTrash.classList.remove("bg-[#0cdb28]");
+  searchComplete.classList.remove("bg-[#0cdb28]");
+  todaySearch.classList.remove("bg-[#0cdb28]");
+  profileBg.classList.remove("bg-[#0cdb28]");
+
+  //remove bg1
+
+  _body.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.remove("bg2theme1");
+  taskPannell.classList.remove("bg2theme1");
+  taskAllpage.classList.remove("bg2theme1");
+  trashPage.classList.remove("bg2theme1");
+  completePage.classList.remove("bg2theme1");
+  dayPage.classList.remove("bg2theme1");
+  profilePage.classList.remove("bg2theme1");
+  themePage.classList.remove("bg2theme1");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+      //remove bg2
+
+  _body.classList.remove("bg1theme2");
+  _main.classList.remove("bg1theme2");
+  panell.classList.remove("bg2theme2");
+  taskPannell.classList.remove("bg2theme2");
+  taskAllpage.classList.remove("bg2theme2");
+  trashPage.classList.remove("bg2theme2");
+  completePage.classList.remove("bg2theme2");
+  dayPage.classList.remove("bg2theme2");
+  profilePage.classList.remove("bg2theme2");
+  themePage.classList.remove("bg2theme2");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  // add
+  _body.classList.add("bg-[#006bab]");
+  _main.classList.add("bg-[#006bab]");
+  panell.classList.add("bg-[#14b5ff]");
+  taskPannell.classList.add("bg-[#75d5ff]");
+  taskAllpage.classList.add("bg-[#75d5ff]");
+  trashPage.classList.add("bg-[#75d5ff]");
+  completePage.classList.add("bg-[#75d5ff]");
+  dayPage.classList.add("bg-[#75d5ff]");
+  profilePage.classList.add("bg-[#75d5ff]");
+  themePage.classList.add("bg-[#75d5ff]");
+  searchInp.classList.add("bg-[#14b5ff]");
+  searchTrash.classList.add("bg-[#14b5ff]");
+  searchComplete.classList.add("bg-[#14b5ff]");
+  todaySearch.classList.add("bg-[#14b5ff]");
+  profileBg.classList.add("bg-[#14b5ff]");
+});
+
+///////////////////////////////// purple theme
+
+let purpleColor = document.querySelector("#purpleColor");
+purpleColor.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  searchInp.classList.remove("bg-[#ffff00]");
+  searchTrash.classList.remove("bg-[#ffff00]");
+  searchComplete.classList.remove("bg-[#ffff00]");
+  todaySearch.classList.remove("bg-[#ffff00]");
+  profileBg.classList.remove("bg-[#ffff00]");
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  searchInp.classList.remove("bg-[#14b5ff]");
+  searchTrash.classList.remove("bg-[#14b5ff]");
+  searchComplete.classList.remove("bg-[#14b5ff]");
+  todaySearch.classList.remove("bg-[#14b5ff]");
+  profileBg.classList.remove("bg-[#14b5ff]");
+
+  ///////////////////// remove green
+
+  _body.classList.remove("bg-[#078e1a]");
+  _main.classList.remove("bg-[#078e1a]");
+  panell.classList.remove("bg-[#0cdb28]");
+  taskPannell.classList.remove("bg-[#78fd89]");
+  taskAllpage.classList.remove("bg-[#78fd89]");
+  trashPage.classList.remove("bg-[#78fd89]");
+  completePage.classList.remove("bg-[#78fd89]");
+  dayPage.classList.remove("bg-[#78fd89]");
+  profilePage.classList.remove("bg-[#78fd89]");
+  themePage.classList.remove("bg-[#78fd89]");
+  searchInp.classList.remove("bg-[#0cdb28]");
+  searchTrash.classList.remove("bg-[#0cdb28]");
+  searchComplete.classList.remove("bg-[#0cdb28]");
+  todaySearch.classList.remove("bg-[#0cdb28]");
+  profileBg.classList.remove("bg-[#0cdb28]");
+
+  //remove bg1
+
+  _body.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.remove("bg2theme1");
+  taskPannell.classList.remove("bg2theme1");
+  taskAllpage.classList.remove("bg2theme1");
+  trashPage.classList.remove("bg2theme1");
+  completePage.classList.remove("bg2theme1");
+  dayPage.classList.remove("bg2theme1");
+  profilePage.classList.remove("bg2theme1");
+  themePage.classList.remove("bg2theme1");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+      //remove bg2
+
+  _body.classList.remove("bg1theme2");
+  _main.classList.remove("bg1theme2");
+  panell.classList.remove("bg2theme2");
+  taskPannell.classList.remove("bg2theme2");
+  taskAllpage.classList.remove("bg2theme2");
+  trashPage.classList.remove("bg2theme2");
+  completePage.classList.remove("bg2theme2");
+  dayPage.classList.remove("bg2theme2");
+  profilePage.classList.remove("bg2theme2");
+  themePage.classList.remove("bg2theme2");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  // add purple
+
+  _body.classList.add("bg-[#2401d6]");
+  _main.classList.add("bg-[#2401d6]");
+  panell.classList.add("bg-[#523bff]");
+  taskPannell.classList.add("bg-[#7c73ff]");
+  taskAllpage.classList.add("bg-[#7c73ff]");
+  trashPage.classList.add("bg-[#7c73ff]");
+  completePage.classList.add("bg-[#7c73ff]");
+  dayPage.classList.add("bg-[#7c73ff]");
+  profilePage.classList.add("bg-[#7c73ff]");
+  themePage.classList.add("bg-[#7c73ff]");
+  searchInp.classList.add("bg-[#3d14ff]");
+  searchTrash.classList.add("bg-[#3d14ff]");
+  searchComplete.classList.add("bg-[#3d14ff]");
+  todaySearch.classList.add("bg-[#3d14ff]");
+  profileBg.classList.add("bg-[#3d14ff]");
+});
+
+/////////////////////////////////////// green theme
+
+let greenColor = document.querySelector("#greenColor");
+greenColor.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  searchInp.classList.remove("bg-[#ffff00]");
+  searchTrash.classList.remove("bg-[#ffff00]");
+  searchComplete.classList.remove("bg-[#ffff00]");
+  todaySearch.classList.remove("bg-[#ffff00]");
+  profileBg.classList.remove("bg-[#ffff00]");
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  searchInp.classList.remove("bg-[#14b5ff]");
+  searchTrash.classList.remove("bg-[#14b5ff]");
+  searchComplete.classList.remove("bg-[#14b5ff]");
+  todaySearch.classList.remove("bg-[#14b5ff]");
+  profileBg.classList.remove("bg-[#14b5ff]");
+
+  // remove purple
+
+  _body.classList.remove("bg-[#2401d6]");
+  _main.classList.remove("bg-[#2401d6]");
+  panell.classList.remove("bg-[#523bff]");
+  taskPannell.classList.remove("bg-[#7c73ff]");
+  taskAllpage.classList.remove("bg-[#7c73ff]");
+  trashPage.classList.remove("bg-[#7c73ff]");
+  completePage.classList.remove("bg-[#7c73ff]");
+  dayPage.classList.remove("bg-[#7c73ff]");
+  profilePage.classList.remove("bg-[#7c73ff]");
+  themePage.classList.remove("bg-[#7c73ff]");
+  searchInp.classList.remove("bg-[#3d14ff]");
+  searchTrash.classList.remove("bg-[#3d14ff]");
+  searchComplete.classList.remove("bg-[#3d14ff]");
+  todaySearch.classList.remove("bg-[#3d14ff]");
+  profileBg.classList.remove("bg-[#3d14ff]");
+
+  //remove bg1
+
+  _body.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.remove("bg2theme1");
+  taskPannell.classList.remove("bg2theme1");
+  taskAllpage.classList.remove("bg2theme1");
+  trashPage.classList.remove("bg2theme1");
+  completePage.classList.remove("bg2theme1");
+  dayPage.classList.remove("bg2theme1");
+  profilePage.classList.remove("bg2theme1");
+  themePage.classList.remove("bg2theme1");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+      //remove bg2
+
+  _body.classList.remove("bg1theme2");
+  _main.classList.remove("bg1theme2");
+  panell.classList.remove("bg2theme2");
+  taskPannell.classList.remove("bg2theme2");
+  taskAllpage.classList.remove("bg2theme2");
+  trashPage.classList.remove("bg2theme2");
+  completePage.classList.remove("bg2theme2");
+  dayPage.classList.remove("bg2theme2");
+  profilePage.classList.remove("bg2theme2");
+  themePage.classList.remove("bg2theme2");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  ///////////////////// add green
+
+  _body.classList.add("bg-[#078e1a]");
+  _main.classList.add("bg-[#078e1a]");
+  panell.classList.add("bg-[#0cdb28]");
+  taskPannell.classList.add("bg-[#78fd89]");
+  taskAllpage.classList.add("bg-[#78fd89]");
+  trashPage.classList.add("bg-[#78fd89]");
+  completePage.classList.add("bg-[#78fd89]");
+  dayPage.classList.add("bg-[#78fd89]");
+  profilePage.classList.add("bg-[#78fd89]");
+  themePage.classList.add("bg-[#78fd89]");
+  searchInp.classList.add("bg-[#0cdb28]");
+  searchTrash.classList.add("bg-[#0cdb28]");
+  searchComplete.classList.add("bg-[#0cdb28]");
+  todaySearch.classList.add("bg-[#0cdb28]");
+  profileBg.classList.add("bg-[#0cdb28]");
+});
+
+//////////////////////////////////////// bg1 theme
+
+let bg1 = document.querySelector("#bg1");
+bg1.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  searchInp.classList.remove("bg-[#ffff00]");
+  searchTrash.classList.remove("bg-[#ffff00]");
+  searchComplete.classList.remove("bg-[#ffff00]");
+  todaySearch.classList.remove("bg-[#ffff00]");
+  profileBg.classList.remove("bg-[#ffff00]");
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  searchInp.classList.remove("bg-[#14b5ff]");
+  searchTrash.classList.remove("bg-[#14b5ff]");
+  searchComplete.classList.remove("bg-[#14b5ff]");
+  todaySearch.classList.remove("bg-[#14b5ff]");
+  profileBg.classList.remove("bg-[#14b5ff]");
+
+  // remove purple
+
+  _body.classList.remove("bg-[#2401d6]");
+  _main.classList.remove("bg-[#2401d6]");
+  panell.classList.remove("bg-[#523bff]");
+  taskPannell.classList.remove("bg-[#7c73ff]");
+  taskAllpage.classList.remove("bg-[#7c73ff]");
+  trashPage.classList.remove("bg-[#7c73ff]");
+  completePage.classList.remove("bg-[#7c73ff]");
+  dayPage.classList.remove("bg-[#7c73ff]");
+  profilePage.classList.remove("bg-[#7c73ff]");
+  themePage.classList.remove("bg-[#7c73ff]");
+  searchInp.classList.remove("bg-[#3d14ff]");
+  searchTrash.classList.remove("bg-[#3d14ff]");
+  searchComplete.classList.remove("bg-[#3d14ff]");
+  todaySearch.classList.remove("bg-[#3d14ff]");
+  profileBg.classList.remove("bg-[#3d14ff]");
+
+  //add green
+
+  _body.classList.remove("bg-[#078e1a]");
+  _main.classList.remove("bg-[#078e1a]");
+  panell.classList.remove("bg-[#0cdb28]");
+  taskPannell.classList.remove("bg-[#78fd89]");
+  taskAllpage.classList.remove("bg-[#78fd89]");
+  trashPage.classList.remove("bg-[#78fd89]");
+  completePage.classList.remove("bg-[#78fd89]");
+  dayPage.classList.remove("bg-[#78fd89]");
+  profilePage.classList.remove("bg-[#78fd89]");
+  themePage.classList.remove("bg-[#78fd89]");
+  searchInp.classList.remove("bg-[#0cdb28]");
+  searchTrash.classList.remove("bg-[#0cdb28]");
+  searchComplete.classList.remove("bg-[#0cdb28]");
+  todaySearch.classList.remove("bg-[#0cdb28]");
+  profileBg.classList.remove("bg-[#0cdb28]");
+
+    //remove bg2
+
+  _body.classList.remove("bg1theme2");
+  _main.classList.remove("bg1theme2");
+  panell.classList.remove("bg2theme2");
+  taskPannell.classList.remove("bg2theme2");
+  taskAllpage.classList.remove("bg2theme2");
+  trashPage.classList.remove("bg2theme2");
+  completePage.classList.remove("bg2theme2");
+  dayPage.classList.remove("bg2theme2");
+  profilePage.classList.remove("bg2theme2");
+  themePage.classList.remove("bg2theme2");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  //add bg1
+
+  _body.classList.add("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.add("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.add("bg2theme1");
+  taskPannell.classList.add("bg2theme1");
+  taskAllpage.classList.add("bg2theme1");
+  trashPage.classList.add("bg2theme1");
+  completePage.classList.add("bg2theme1");
+  dayPage.classList.add("bg2theme1");
+  profilePage.classList.add("bg2theme1");
+  themePage.classList.add("bg2theme1");
+  searchInp.classList.add("bg-white");
+  searchTrash.classList.add("bg-white");
+  searchComplete.classList.add("bg-white");
+  todaySearch.classList.add("bg-white");
+  profileBg.classList.add("bg-white");
+});
+
+//////////////////////////////////////// bg1 theme
+
+let bg2 = document.querySelector("#bg2");
+bg2.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  searchInp.classList.remove("bg-[#ffff00]");
+  searchTrash.classList.remove("bg-[#ffff00]");
+  searchComplete.classList.remove("bg-[#ffff00]");
+  todaySearch.classList.remove("bg-[#ffff00]");
+  profileBg.classList.remove("bg-[#ffff00]");
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  searchInp.classList.remove("bg-[#14b5ff]");
+  searchTrash.classList.remove("bg-[#14b5ff]");
+  searchComplete.classList.remove("bg-[#14b5ff]");
+  todaySearch.classList.remove("bg-[#14b5ff]");
+  profileBg.classList.remove("bg-[#14b5ff]");
+
+  // remove purple
+
+  _body.classList.remove("bg-[#2401d6]");
+  _main.classList.remove("bg-[#2401d6]");
+  panell.classList.remove("bg-[#523bff]");
+  taskPannell.classList.remove("bg-[#7c73ff]");
+  taskAllpage.classList.remove("bg-[#7c73ff]");
+  trashPage.classList.remove("bg-[#7c73ff]");
+  completePage.classList.remove("bg-[#7c73ff]");
+  dayPage.classList.remove("bg-[#7c73ff]");
+  profilePage.classList.remove("bg-[#7c73ff]");
+  themePage.classList.remove("bg-[#7c73ff]");
+  searchInp.classList.remove("bg-[#3d14ff]");
+  searchTrash.classList.remove("bg-[#3d14ff]");
+  searchComplete.classList.remove("bg-[#3d14ff]");
+  todaySearch.classList.remove("bg-[#3d14ff]");
+  profileBg.classList.remove("bg-[#3d14ff]");
+
+  //add green
+
+  _body.classList.remove("bg-[#078e1a]");
+  _main.classList.remove("bg-[#078e1a]");
+  panell.classList.remove("bg-[#0cdb28]");
+  taskPannell.classList.remove("bg-[#78fd89]");
+  taskAllpage.classList.remove("bg-[#78fd89]");
+  trashPage.classList.remove("bg-[#78fd89]");
+  completePage.classList.remove("bg-[#78fd89]");
+  dayPage.classList.remove("bg-[#78fd89]");
+  profilePage.classList.remove("bg-[#78fd89]");
+  themePage.classList.remove("bg-[#78fd89]");
+  searchInp.classList.remove("bg-[#0cdb28]");
+  searchTrash.classList.remove("bg-[#0cdb28]");
+  searchComplete.classList.remove("bg-[#0cdb28]");
+  todaySearch.classList.remove("bg-[#0cdb28]");
+  profileBg.classList.remove("bg-[#0cdb28]");
+
+  //remove bg1
+
+  _body.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.remove("bg-[url(../images/bg1theme1.jpg)]");
+  panell.classList.remove("bg2theme1");
+  taskPannell.classList.remove("bg2theme1");
+  taskAllpage.classList.remove("bg2theme1");
+  trashPage.classList.remove("bg2theme1");
+  completePage.classList.remove("bg2theme1");
+  dayPage.classList.remove("bg2theme1");
+  profilePage.classList.remove("bg2theme1");
+  themePage.classList.remove("bg2theme1");
+  searchInp.classList.remove("bg-white");
+  searchTrash.classList.remove("bg-white");
+  searchComplete.classList.remove("bg-white");
+  todaySearch.classList.remove("bg-white");
+  profileBg.classList.remove("bg-white");
+
+  //add bg2
+
+  _body.classList.add("bg1theme2");
+  _main.classList.add("bg1theme2");
+  panell.classList.add("bg2theme2");
+  taskPannell.classList.add("bg2theme2");
+  taskAllpage.classList.add("bg2theme2");
+  trashPage.classList.add("bg2theme2");
+  completePage.classList.add("bg2theme2");
+  dayPage.classList.add("bg2theme2");
+  profilePage.classList.add("bg2theme2");
+  themePage.classList.add("bg2theme2");
+  searchInp.classList.add("bg-white");
+  searchTrash.classList.add("bg-white");
+  searchComplete.classList.add("bg-white");
+  todaySearch.classList.add("bg-white");
+  profileBg.classList.add("bg-white");
 });
