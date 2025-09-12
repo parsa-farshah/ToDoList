@@ -413,7 +413,7 @@ defaultColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
@@ -435,7 +435,6 @@ defaultColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-[#4f4f4f]");
   todaySearch.classList.remove("text-white");
   profileBg.classList.remove("bg-[#4f4f4f]");
-
 
   // add
   _body.classList.add("bg-[#d1bf00]");
@@ -547,7 +546,7 @@ blueColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
@@ -569,7 +568,6 @@ blueColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-[#4f4f4f]");
   todaySearch.classList.remove("text-white");
   profileBg.classList.remove("bg-[#4f4f4f]");
-
 
   // add
   _body.classList.add("bg-[#006bab]");
@@ -680,7 +678,7 @@ purpleColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
@@ -702,7 +700,6 @@ purpleColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-[#4f4f4f]");
   todaySearch.classList.remove("text-white");
   profileBg.classList.remove("bg-[#4f4f4f]");
-
 
   // add purple
 
@@ -814,7 +811,7 @@ greenColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
@@ -836,7 +833,6 @@ greenColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-[#4f4f4f]");
   todaySearch.classList.remove("text-white");
   profileBg.classList.remove("bg-[#4f4f4f]");
-
 
   ///////////////////// add green
 
@@ -948,7 +944,7 @@ bg1.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
@@ -971,11 +967,12 @@ bg1.addEventListener("click", () => {
   todaySearch.classList.remove("text-white");
   profileBg.classList.remove("bg-[#4f4f4f]");
 
-
   //add bg1
 
   _body.classList.add("bg-[url(../images/bg1theme1.jpg)]");
+  _body.classList.add("bg-cover");
   _main.classList.add("bg-[url(../images/bg1theme1.jpg)]");
+  _main.classList.add("bg-cover");
   panell.classList.add("bg2theme1");
   taskPannell.classList.add("bg2theme1");
   taskAllpage.classList.add("bg2theme1");
@@ -1082,7 +1079,7 @@ bg2.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
-    //remove dark
+  //remove dark
 
   _body.classList.remove("bg-[#000000]");
   _body.classList.remove("text-gray-600");
