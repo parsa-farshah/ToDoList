@@ -144,6 +144,8 @@ btnTrashPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // all task page
@@ -159,6 +161,8 @@ btnAllTaskPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // compelte page task add in
@@ -171,6 +175,8 @@ completeBtnPage.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // add search
@@ -218,6 +224,8 @@ taskBtn.addEventListener("click", () => {
   dayPage.classList.add("hidden");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 // daypage
@@ -228,6 +236,8 @@ dayBtn.addEventListener("click", () => {
   dayPage.classList.add("flex");
   profilePage.classList.remove("flex");
   profilePage.classList.add("hidden");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
 });
 
 function day(s) {
@@ -286,4 +296,79 @@ let profilePage = document.querySelector("#profilePage");
 profileBtn.addEventListener("click", () => {
   profilePage.classList.remove("hidden");
   profilePage.classList.add("flex");
+  themePage.classList.remove("flex");
+  themePage.classList.add("hidden");
+});
+
+// theme pages
+
+let themeBtn = document.querySelector("#themeBtn");
+let themePage = document.querySelector("#themePage");
+
+themeBtn.addEventListener("click", () => {
+  themePage.classList.remove("hidden");
+  themePage.classList.add("flex");
+});
+
+// default color
+
+let defaultColor = document.querySelector("#defaultColor");
+
+let _body = document.querySelector("#body");
+let _main = document.querySelector("#main");
+let taskPannell = document.querySelector("#taskPannell");
+let taskAllpage = document.querySelector("#taskAllpage");
+let panell = document.querySelector("#panellBtn");
+
+defaultColor.addEventListener("click", () => {
+  // remove blue
+  _body.classList.remove("bg-[#006bab]");
+  _main.classList.remove("bg-[#006bab]");
+  panell.classList.remove("bg-[#14b5ff]");
+  taskPannell.classList.remove("bg-[#75d5ff]");
+  taskAllpage.classList.remove("bg-[#75d5ff]");
+  trashPage.classList.remove("bg-[#75d5ff]");
+  completePage.classList.remove("bg-[#75d5ff]");
+  dayPage.classList.remove("bg-[#75d5ff]");
+  profilePage.classList.remove("bg-[#75d5ff]");
+  themePage.classList.remove("bg-[#75d5ff]");
+  // add
+  _body.classList.add("bg-[#d1bf00]");
+  _main.classList.add("bg-[#d1bf00]");
+  panell.classList.add("bg-[#ffff00]");
+  taskPannell.classList.add("bg-[#f4ffc1]");
+  taskAllpage.classList.add("bg-[#f4ffc1]");
+  trashPage.classList.add("bg-[#f4ffc1]");
+  completePage.classList.add("bg-[#f4ffc1]");
+  dayPage.classList.add("bg-[#f4ffc1]");
+  profilePage.classList.add("bg-[#f4ffc1]");
+  themePage.classList.add("bg-[#f4ffc1]");
+});
+
+let blueColor = document.querySelector("#blueColor");
+
+
+blueColor.addEventListener("click", () => {
+  // remove
+  _body.classList.remove("bg-[#d1bf00]");
+  _main.classList.remove("bg-[#d1bf00]");
+  panell.classList.remove("bg-[#ffff00]");
+  taskPannell.classList.remove("bg-[#f4ffc1]");
+  taskAllpage.classList.remove("bg-[#f4ffc1]");
+  trashPage.classList.remove("bg-[#f4ffc1]");
+  completePage.classList.remove("bg-[#f4ffc1]");
+  dayPage.classList.remove("bg-[#f4ffc1]");
+  profilePage.classList.remove("bg-[#f4ffc1]");
+  themePage.classList.remove("bg-[#f4ffc1]");
+  // add
+  _body.classList.add("bg-[#006bab]");
+  _main.classList.add("bg-[#006bab]");
+  panell.classList.add("bg-[#14b5ff]");
+  taskPannell.classList.add("bg-[#75d5ff]");
+  taskAllpage.classList.add("bg-[#75d5ff]");
+  trashPage.classList.add("bg-[#75d5ff]");
+  completePage.classList.add("bg-[#75d5ff]");
+  dayPage.classList.add("bg-[#75d5ff]");
+  profilePage.classList.add("bg-[#75d5ff]");
+  themePage.classList.add("bg-[#75d5ff]");
 });
