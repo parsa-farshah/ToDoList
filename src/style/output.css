@@ -18,6 +18,7 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -471,11 +472,23 @@
   .bg-\[\#0cdb28\] {
     background-color: #0cdb28;
   }
+  .bg-\[\#000000\] {
+    background-color: #000000;
+  }
+  .bg-\[\#3d3d3d\] {
+    background-color: #3d3d3d;
+  }
   .bg-\[\#3d14ff\] {
     background-color: #3d14ff;
   }
+  .bg-\[\#4f4f4f\] {
+    background-color: #4f4f4f;
+  }
   .bg-\[\#006bab\] {
     background-color: #006bab;
+  }
+  .bg-\[\#6d6d6d\] {
+    background-color: #6d6d6d;
   }
   .bg-\[\#7c73ff\] {
     background-color: #7c73ff;
@@ -613,8 +626,23 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-200 {
+    color: var(--color-gray-200);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-gray-600 {
     color: var(--color-gray-600);
+  }
+  .text-gray-700 {
+    color: var(--color-gray-700);
   }
   .text-white {
     color: var(--color-white);
@@ -624,6 +652,16 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .placeholder-gray-400 {
+    &::placeholder {
+      color: var(--color-gray-400);
+    }
+  }
+  .placeholder-white {
+    &::placeholder {
+      color: var(--color-white);
+    }
   }
   .accent-\[\#c4c4c4ad\] {
     accent-color: #c4c4c4ad;
