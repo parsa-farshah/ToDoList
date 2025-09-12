@@ -972,9 +972,9 @@ bg1.addEventListener("click", () => {
   _body.classList.add("bg-[url(../images/bg1theme1.jpg)]");
   _body.classList.add("bg-cover");
   _body.classList.add("bg-no-repeat");
-  _main.classList.add("bg-[url(../images/bg1theme1.jpg)]");
-  _main.classList.add("bg-cover");
-  _main.classList.add("bg-no-repeat");
+  // _main.classList.add("bg-[url(../images/bg1theme1.jpg)]");
+  // _main.classList.add("bg-cover");
+  // _main.classList.add("bg-no-repeat");
   panell.classList.add("bg2theme1");
   taskPannell.classList.add("bg2theme1");
   taskAllpage.classList.add("bg2theme1");
@@ -1108,7 +1108,8 @@ bg2.addEventListener("click", () => {
 
   _body.classList.add("bg1theme2");
   _body.classList.add("text-gray-600");
-  _main.classList.add("bg1theme2");
+  _body.classList.add("bg-no-repeat");
+  // _main.classList.add("bg1theme2");
   panell.classList.add("bg2theme2");
   taskPannell.classList.add("bg2theme2");
   taskAllpage.classList.add("bg2theme2");
