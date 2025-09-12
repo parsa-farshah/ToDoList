@@ -300,7 +300,7 @@ profileBtn.addEventListener("click", () => {
   themePage.classList.add("hidden");
 });
 
-// theme pages
+///////////////////////////////// theme pages
 
 let themeBtn = document.querySelector("#themeBtn");
 let themePage = document.querySelector("#themePage");
@@ -310,7 +310,7 @@ themeBtn.addEventListener("click", () => {
   themePage.classList.add("flex");
 });
 
-// default color
+///////////////////////////////////// default color
 
 let defaultColor = document.querySelector("#defaultColor");
 
@@ -1260,4 +1260,52 @@ dark.addEventListener("click", () => {
   todaySearch.classList.add("bg-[#4f4f4f]");
   todaySearch.classList.add("text-white");
   profileBg.classList.add("bg-[#4f4f4f]");
+});
+
+///////////////////////////////////////// search complete
+searchComplete.addEventListener("keyup", (e) => {
+  let searchValComp = e.target.value.toLowerCase();
+  let allTaskscomp = document.querySelectorAll("#allTask h5");
+
+  allTaskscomp.forEach((val) => {
+    if (val.innerText.toLowerCase().startsWith(searchValComp)) {
+      val.parentElement.parentElement.classList.remove("hidden");
+      val.parentElement.parentElement.classList.add("flex");
+    } else {
+      val.parentElement.parentElement.classList.add("hidden");
+      val.parentElement.parentElement.classList.remove("flex");
+    }
+  });
+});
+
+///////////////////////////////////////// search trash
+searchTrash.addEventListener("keyup", (e) => {
+  let searchValTrash = e.target.value.toLowerCase();
+  let allTasksTrash = document.querySelectorAll("#allTask h5");
+
+  allTasksTrash.forEach((val) => {
+    if (val.innerText.toLowerCase().startsWith(searchValTrash)) {
+      val.parentElement.parentElement.classList.remove("hidden");
+      val.parentElement.parentElement.classList.add("flex");
+    } else {
+      val.parentElement.parentElement.classList.add("hidden");
+      val.parentElement.parentElement.classList.remove("flex");
+    }
+  });
+});
+
+///////////////////////////////////////// search day
+todaySearch.addEventListener("keyup", (e) => {
+  let searchValDay = e.target.value.toLowerCase();
+  let allTasksDay = document.querySelectorAll("#allTask h5");
+
+  allTasksDay.forEach((val) => {
+    if (val.innerText.toLowerCase().startsWith(searchValDay)) {
+      val.parentElement.parentElement.classList.remove("hidden");
+      val.parentElement.parentElement.classList.add("flex");
+    } else {
+      val.parentElement.parentElement.classList.add("hidden");
+      val.parentElement.parentElement.classList.remove("flex");
+    }
+  });
 });
