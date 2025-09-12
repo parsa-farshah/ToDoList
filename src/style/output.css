@@ -331,9 +331,6 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-start {
-    justify-content: flex-start;
-  }
   .gap-0\.5 {
     gap: calc(var(--spacing) * 0.5);
   }
@@ -761,6 +758,11 @@
       align-content: flex-start;
     }
   }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
   .md\:gap-4 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 4);
@@ -826,7 +828,7 @@
     background-size: cover;
   }
   .bg2theme2 {
-    background-image: url(../images/bg6theme2.jpg);
+    background-image: url(../images/bg9theme2.jpg);
     background-size: cover;
   }
   .bg1theme2 {
