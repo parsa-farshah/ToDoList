@@ -413,6 +413,30 @@ defaultColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
+
+
   // add
   _body.classList.add("bg-[#d1bf00]");
   _main.classList.add("bg-[#d1bf00]");
@@ -523,6 +547,30 @@ blueColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
+
+
   // add
   _body.classList.add("bg-[#006bab]");
   _main.classList.add("bg-[#006bab]");
@@ -631,6 +679,30 @@ purpleColor.addEventListener("click", () => {
   searchComplete.classList.remove("bg-white");
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
+
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
+
 
   // add purple
 
@@ -742,6 +814,30 @@ greenColor.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
+
+
   ///////////////////// add green
 
   _body.classList.add("bg-[#078e1a]");
@@ -852,6 +948,30 @@ bg1.addEventListener("click", () => {
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
 
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
+
+
   //add bg1
 
   _body.classList.add("bg-[url(../images/bg1theme1.jpg)]");
@@ -961,6 +1081,29 @@ bg2.addEventListener("click", () => {
   searchComplete.classList.remove("bg-white");
   todaySearch.classList.remove("bg-white");
   profileBg.classList.remove("bg-white");
+
+    //remove dark
+
+  _body.classList.remove("bg-[#000000]");
+  _body.classList.remove("text-gray-600");
+  _main.classList.remove("bg-[#000000]");
+  panell.classList.remove("bg-[#6d6d6d]");
+  taskPannell.classList.remove("bg-[#6d6d6d]");
+  taskAllpage.classList.remove("bg-[#6d6d6d]");
+  trashPage.classList.remove("bg-[#6d6d6d]");
+  completePage.classList.remove("bg-[#6d6d6d]");
+  dayPage.classList.remove("bg-[#6d6d6d]");
+  profilePage.classList.remove("bg-[#6d6d6d]");
+  themePage.classList.remove("bg-[#6d6d6d]");
+  searchInp.classList.remove("bg-[#4f4f4f]");
+  searchInp.classList.remove("text-white");
+  searchTrash.classList.remove("bg-[#4f4f4f]");
+  searchTrash.classList.remove("text-white");
+  searchComplete.classList.remove("bg-[#4f4f4f]");
+  searchComplete.classList.remove("text-white");
+  todaySearch.classList.remove("bg-[#4f4f4f]");
+  todaySearch.classList.remove("text-white");
+  profileBg.classList.remove("bg-[#4f4f4f]");
 
   //add bg2
 
