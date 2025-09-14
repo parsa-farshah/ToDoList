@@ -52,13 +52,8 @@ function makeTask() {
   taskdiv.innerHTML += `
     <div  class="task w-full h-fit mt-4 flex justify-between items-center border-b border-b-gray-300">
       <div id="allTask" class="w-full h-full flex items-center gap-2 pb-2">
-        <input
-        onclick="myTick(this)"
-         id="checkBox"
-          class="w-[20px] h-[20px] accent-[#c4c4c4ad]"
-          type="checkbox"
-        />
         <h5 class="text-xl font-bold capitalize">${taskValue}</h5>
+        <img data-tick="true" class="w-[35px] h-[35px]" onclick="myTick(this)"  id="checkBox" src="src/images/tickBox.png" >
       </div>
       <div class="flex gap-2">
         <figure onclick="day(this)" class="hover:scale-125 duration-500">
@@ -80,24 +75,25 @@ function makeTask() {
 let completeDiv = document.querySelector("#complete");
 
 let taskChange;
-
+let _flag = 1;
 function myTick(s) {
   let taskChange = s.closest(".task");
   let taskText = taskChange.querySelector("h5").innerText;
+  const isCompleted = taskChange.classList.contains("completed");
 
-  if (s.checked) {
-    // اضافه کردن به completeDiv
-
-    taskChange.classList.add("opacity-50");
+  if (!isCompleted) {
+    taskChange.classList.add("completed", "opacity-50");
     completeDiv.classList.remove("hidden");
     completeDiv.classList.add("flex");
-    let copy = taskChange.cloneNode(true); // true یعنی همراه فرزندها
+    s.src = "src/images/tick.png";
+    let copy = taskChange.cloneNode(true);
     completePage.appendChild(copy);
     completeDiv.appendChild(taskChange);
+    s.setAttribute("data-tick", false);
   } else {
-    // برگشت به taskdiv
     taskdiv.appendChild(taskChange);
-    taskChange.classList.remove("opacity-50");
+    taskChange.classList.remove("completed", "opacity-50");
+    s.src = "src/images/tickBox.png";
     taskChange.classList.add("opacity-100");
   }
 }
