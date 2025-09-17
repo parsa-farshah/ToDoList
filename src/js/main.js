@@ -39,7 +39,7 @@ createTaskBtn.addEventListener("click", () => {
     }, 5000);
   } else {
     taskValue = inpTaskUser.children[0].value;
-    makeTask();
+    makeTask(taskValue, "active");
     saveTasks();
   }
 
@@ -48,26 +48,40 @@ createTaskBtn.addEventListener("click", () => {
   inpTaskUser.children[0].focus();
 });
 
-function makeTask() {
-  taskdiv.innerHTML += `
-    <div  class="task w-full h-fit mt-4 flex justify-between items-center border-b border-b-gray-300">
-      <div id="allTask" class="w-full h-full flex items-center gap-2 pb-2">
-        <h5 class="text-xl font-bold capitalize">${taskValue}</h5>
-        <img data-tick="true" class="w-[35px] h-[35px]" onclick="myTick(this)"  id="checkBox" src="src/images/tickBox.png" >
+function makeTask(val, status = "active") {
+  const html = `
+    <div class="task w-full h-fit mt-4 flex justify-between items-center border-b border-b-gray-300 ${
+      status === "complete" ? "opacity-50" : ""
+    } ${status === "trash" ? "opacity-40 select-none" : ""}">
+      <div class="allTask w-full h-full flex items-center gap-2 pb-2">
+        <h5 class="text-xl font-bold capitalize">${val}</h5>
+        <img 
+          data-tick="${status === "complete" ? false : true}" 
+          class="w-[35px] h-[35px]" 
+          onclick="myTick(this)"  
+          id="checkBox" 
+          src="src/images/${status === "complete" ? "tick.png" : "tickBox.png"}"
+        >
       </div>
       <div class="flex gap-2">
         <figure onclick="day(this)" class="hover:scale-125 duration-500">
           <img class="w-[20px] h-[20px] cursor-pointer" src="src/images/day.png" alt="dat" />
         </figure>
         <figure onclick="trash(this)" class="hover:scale-125 duration-500">
-          <img
-            class="w-[20px] h-[20px] cursor-pointer"
-            src="src/images/trash.png"
-            alt=""
-          />
+          <img class="w-[20px] h-[20px] cursor-pointer" src="src/images/trash.png" alt="" />
         </figure>
       </div>
-    </div> `;
+    </div>`;
+
+  if (status === "complete") {
+    completePage.insertAdjacentHTML("beforeend", html);
+  } else if (status === "trash") {
+    trashPage.insertAdjacentHTML("beforeend", html);
+  } else if (status === "day") {
+    dayPage.insertAdjacentHTML("beforeend", html);
+  } else {
+    taskdiv.insertAdjacentHTML("beforeend", html);
+  }
 }
 
 // add in all in complete
@@ -96,6 +110,7 @@ function myTick(s) {
     s.src = "src/images/tickBox.png";
     taskChange.classList.add("opacity-100");
   }
+  saveTasks();
 }
 
 // remove or trash
@@ -239,6 +254,7 @@ dayBtn.addEventListener("click", () => {
 function day(s) {
   let dayTask = s.closest(".task");
   dayPage.appendChild(dayTask);
+  saveTasks();
 }
 
 function saveTasks() {
@@ -265,22 +281,7 @@ function saveTasks() {
 window.addEventListener("DOMContentLoaded", () => {
   let saved = JSON.parse(localStorage.getItem("tasks")) || [];
   saved.forEach((t) => {
-    taskValue = t.text;
-    makeTask();
-
-    // آخرین تسک ساخته شده
-    let lastTask = taskdiv.querySelector(".task:last-child");
-
-    // بر اساس status جابجا کن
-    if (t.status === "complete") {
-      completePage.appendChild(lastTask);
-      lastTask.classList.add("opacity-50");
-    } else if (t.status === "trash") {
-      trashPage.appendChild(lastTask);
-      lastTask.classList.add("opacity-40", "select-none");
-    } else if (t.status === "day") {
-      dayPage.appendChild(lastTask);
-    }
+    makeTask(t.text, t.status);
   });
 });
 
